@@ -1,0 +1,113 @@
+/* Reset some browser defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background: linear-gradient(135deg, #1d1f20, #121417);
+  color: #ffffff;
+  padding: 1rem;
+}
+
+/* Container */
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 2rem;
+}
+
+/* Headings */
+h1, h2 {
+  color: #00ffd5;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  border-bottom: 2px solid #00ffd5;
+  padding-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+/* Paragraphs */
+p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #e0e0e0;
+}
+
+/* Links */
+a {
+  color: #00ffd5;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Sections */
+.section {
+  margin-top: 2rem;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 2rem 0;
+  border-top: 1px solid #333;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* Cookie Banner */
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #222;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  z-index: 1000;
+  font-size: 0.9rem;
+}
+
+.cookie-banner button {
+  background-color: #00ffd5;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-left: 1rem;
+  cursor: pointer;
+  color: #000;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  body {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+
+  .cookie-banner {
+    font-size: 0.8rem;
+  }
+}
