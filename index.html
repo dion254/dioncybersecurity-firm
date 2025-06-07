@@ -11,41 +11,76 @@
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
       background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
       color: white;
+      line-height: 1.6;
     }
+
     .container {
+      max-width: 960px;
+      margin: 0 auto;
       padding: 2rem;
     }
+
+    header {
+      margin-bottom: 2rem;
+    }
+
     h1 {
       font-size: 3rem;
       color: #00ffe7;
+      margin-top: 0;
     }
+
     h2 {
       color: #ffb347;
+      margin-top: 2rem;
     }
-    p {
+
+    p, ul {
       max-width: 800px;
-      line-height: 1.6;
     }
-    .section {
-      margin: 2rem 0;
+
+    ul {
+      padding-left: 20px;
     }
-    .footer {
+
+    li {
+      margin-bottom: 0.5rem;
+      padding: 0.5rem;
+      border-radius: 4px;
+      transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    }
+
+    section ul li:hover {
+      background-color: rgba(0, 255, 231, 0.1);
+      transform: scale(1.03);
+    }
+
+    section {
+      margin-bottom: 2rem;
+    }
+
+    footer {
       margin-top: 4rem;
       font-size: 0.9rem;
+      text-align: center;
     }
+
     .cookie-banner {
       position: fixed;
       bottom: 0;
+      left: 0;
       width: 100%;
       background: #222;
       color: #fff;
       padding: 1rem;
       text-align: center;
       z-index: 999;
+      box-sizing: border-box;
     }
+
     .cookie-banner button {
       background-color: #00ffcc;
       border: none;
@@ -55,12 +90,25 @@
       color: #000;
       font-weight: bold;
     }
+
+    .cookie-banner button:hover {
+      opacity: 0.9;
+    }
+
     a {
       color: #00ffe7;
       text-decoration: none;
     }
-    a:hover {
+
+    a:hover,
+    a:focus {
       text-decoration: underline;
+    }
+
+    button:focus,
+    a:focus {
+      outline: 2px solid #00ffe7;
+      outline-offset: 2px;
     }
   </style>
   <script>
@@ -68,62 +116,68 @@
       document.getElementById('cookie-banner').style.display = 'none';
       document.cookie = 'cookies_accepted=true; path=/;';
     }
+
+    window.onload = function () {
+      document.getElementById("currentYear").textContent = new Date().getFullYear();
+    };
   </script>
 </head>
 <body>
   <div class="container">
-    <h1>Dion Cybersecurity Firm</h1>
-    <p>Welcome to the solution where we value your security.</p>
+    <header>
+      <h1>Dion Cybersecurity Firm</h1>
+      <p>Welcome to the solution where we value your security.</p>
+    </header>
 
-    <div class="section">
+    <section>
       <h2>🔐 Our Services</h2>
-      <p>
-        We protect your digital space by:<br>
-        - Scanning for open ports<br>
-        - Identifying vulnerabilities<br>
-        - Monitoring for cyber threats<br>
-        - Installing strong systems<br>
-        - Defending against backdoors, hackers, bugs, phishing<br>
-        - Blocking tools like Ripper<br>
-        - Managing your passwords securely
-      </p>
-    </div>
+      <ul>
+        <li>Scanning for open ports</li>
+        <li>Identifying vulnerabilities</li>
+        <li>Monitoring for cyber threats</li>
+        <li>Installing strong systems</li>
+        <li>Defending against backdoors, hackers, bugs, phishing</li>
+        <li>Blocking tools like Ripper</li>
+        <li>Managing your passwords securely</li>
+      </ul>
+    </section>
 
-    <div class="section">
+    <section>
       <h2>🎓 Experience & Certifications</h2>
-      <p>
-        - Certified: TryHackMe, Hack The Box<br>
-        - Real-world attack simulations via Workstation 17 & Oracle<br>
-        - OS used: Ubuntu, Kali Linux, Cinnamon<br>
-        - Tools: SQL, Wireshark<br>
-        - Freelancing: 1 year on Upwork, 7 months on Freelancer<br>
-        - Real-life troubleshooting through volunteer work<br>
-        - Personal home labs for hands-on practice
-      </p>
-    </div>
+      <ul>
+        <li>Certified: TryHackMe, Hack The Box</li>
+        <li>Real-world attack simulations via Workstation 17 & Oracle</li>
+        <li>OS used: Ubuntu, Kali Linux, Cinnamon</li>
+        <li>Tools: SQL, Wireshark</li>
+        <li>Freelancing: 1 year on Upwork, 7 months on Freelancer</li>
+        <li>Real-life troubleshooting through volunteer work</li>
+        <li>Personal home labs for hands-on practice</li>
+      </ul>
+    </section>
 
-    <div class="section">
+    <section>
       <h2>📚 Education</h2>
-      <p>
-        - Bachelor's Degree in Computer Science<br>
-        - Diploma in ICT
-      </p>
-    </div>
+      <ul>
+        <li>Bachelor's Degree in Computer Science</li>
+        <li>Diploma in ICT</li>
+      </ul>
+    </section>
 
-    <div class="section">
+    <section>
       <h2>📲 Find Me Online</h2>
       <p>
-        Instagram: <a href="https://instagram.com/she.loves.dion" target="_blank">@she.loves.dion</a>
+        Instagram: <a href="https://instagram.com/she_loves_dion" target="_blank">@she_loves_dion</a><br>
+        X: <a href="https://x.com/Dion Dickson123" target="_blank">@Dion Dickson</a>
       </p>
-    </div>
+    </section>
 
-    <div class="footer">
-      <p>&copy; 2025 Dion Cybersecurity Firm. All rights reserved.</p>
-    </div>
+    <footer>
+      <p>&copy; <span id="currentYear">2025</span> Dion Cybersecurity Firm. All rights reserved.</p>
+    </footer>
   </div>
 
   <div id="cookie-banner" class="cookie-banner">
-    This website uses cookies to enhance your experience. 
+    This website uses cookies to enhance your experience.
     <button onclick="acceptCookies()">Accept</button>
   </div>
 </body>
