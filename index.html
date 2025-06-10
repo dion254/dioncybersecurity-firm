@@ -110,6 +110,21 @@
       outline: 2px solid #00ffe7;
       outline-offset: 2px;
     }
+
+    .logo {
+      max-width: 180px;
+      margin-bottom: 1rem;
+    }
+
+    .infographic, .dashboard {
+      width: 100%;
+      max-width: 800px;
+      margin: 2rem auto;
+      border: 2px solid #00ffe7;
+      padding: 1rem;
+      border-radius: 12px;
+      background-color: rgba(0, 255, 231, 0.05);
+    }
   </style>
   <script>
     function acceptCookies() {
@@ -125,9 +140,32 @@
 <body>
   <div class="container">
     <header>
+      <img src="https://dummyimage.com/180x60/00ffe7/000000&text=Dion+Cyber+Logo" alt="Dion Logo" class="logo">
       <h1>Dion Cybersecurity Firm</h1>
       <p>Welcome to the solution where we value your security.</p>
     </header>
+
+    <section class="infographic">
+      <h2>🚨 Threat Infographic: Anatomy of a Phishing Attack</h2>
+      <ul>
+        <li><strong>Step 1:</strong> Victim receives a fake email from a trusted source</li>
+        <li><strong>Step 2:</strong> Email contains malicious link or attachment</li>
+        <li><strong>Step 3:</strong> User clicks — malware installs or credentials are stolen</li>
+        <li><strong>Step 4:</strong> Attacker gains unauthorized access to system</li>
+        <li><strong>Step 5:</strong> Data is exfiltrated or systems are held for ransom</li>
+      </ul>
+    </section>
+
+    <section class="dashboard">
+      <h2>🧭 Cybersecurity Dashboard (UI Mockup)</h2>
+      <ul>
+        <li><strong>Live Threat Map:</strong> Real-time IP traffic monitoring</li>
+        <li><strong>Alerts:</strong> Intrusion Detection - 5 active events</li>
+        <li><strong>Firewall:</strong> 3 attempts blocked in last hour</li>
+        <li><strong>System Status:</strong> All servers operational</li>
+        <li><strong>User Behavior:</strong> Anomaly detected on employee endpoint</li>
+      </ul>
+    </section>
 
     <section>
       <h2>🔐 Our Services</h2>
@@ -182,4 +220,3 @@
   </div>
 </body>
 </html>
-deploy
